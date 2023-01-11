@@ -1,7 +1,7 @@
 class EpisodesController < ApplicationController
     def index
         episodes = Episode.all
-        render josn: episodes, status: :ok 
+        render json: episodes, status: :ok 
     end
     def show
         episode = Episode.find_by(id: params[:id])
