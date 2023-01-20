@@ -6,10 +6,16 @@ import Signup from './components/Signup'
 import NavBar from './components/NavBar';
 import ProfilePage from "./components/ProfilePage";
 import images from "./images/Header.jpeg"
+// import AnimeInfo from "./HomePage/AnimeInfo";
+// import AnimeCardLandingPage from "./HomePage/AnimeCardLandingPage";
+import AnimeInfo from "./HomePage/AnimeInfo";
+
 
 
 function App() {
   const [user, loginUser] = useState(null)
+  const [anime, setAnime] = useState([]);
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch('/me')
@@ -33,6 +39,14 @@ function App() {
       .then(loginUser(null))
   }
 
+
+  useEffect(() => {
+    fetch('/animes')
+      .then((r) => r.json())
+      .then((data) => setAnime(data));
+  }, []);
+  const searchName = anime.filter((animeName) => animeName.title.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <>
       <NavBar handleLogout={handleLogout} user={user} />
@@ -46,15 +60,26 @@ function App() {
           <div className="text-landing">
             <h1 className="landing-pg-title">Welcome to WakuWaku.tv!</h1>
             <p className="landing-pg-desc">WakuWaku.tv is a web app where you can watch you're favorite anime movie and shows subbed for FREE! Watch in ultra HD quality ad free without any registration or payment needed. </p>
-            <button className="landing-pg-btn">Get Started!</button>
+            <Link className="navlink" to="/Login"> <button className="landing-pg-btn">Get Started!</button>
+            </Link>
+
           </div>
         </div>
       </Route>
       <div>
         <Switch>
-          <Route exact path="/Home">
-            <HomePage user={user} loginUser={loginUser} />
+          <Route exact path="/Home" >
+            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} />
           </Route>
+          {anime.map(anime => {
+            return (
+              <Route path={`/:${anime.title}`}>
+                <AnimeInfo anime={anime} key={anime.id} />
+              </Route>
+            )
+          })}
+
+
 
           <Route exact path="/login">
             <div className='landing-page-bkgrnd'>

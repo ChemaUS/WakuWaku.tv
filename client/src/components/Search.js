@@ -1,12 +1,13 @@
-function Search() {
+function Search({ anime, search, setSearch }) {
+
     return (
         <>
-            <div id="anime-search-bar">
+            <div id="anime-search-bar-container">
                 <input
-                    className=""
-                    placeholder="Search"
-                    value=""
-
+                    className="search-bar"
+                    placeholder="Search anime..."
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
                 ></input>
             </div>
         </>

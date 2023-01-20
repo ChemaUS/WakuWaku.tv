@@ -1,9 +1,9 @@
-function Video({ episode }) {
+function Video({ episodes }) {
     return (
         <>
             <div>
-                <iframe src={episode.episodeUrl} width="640" height="480" allow="autoplay" title={episode.anime}></iframe>
-                <h1> Episode {episode.episodeNumber}</h1>
+                <iframe src={episodes.episodeUrl} width="640" height="480" allow="autoplay" title={episodes.anime}></iframe>
+                <h1> Episode {episodes.episodeNumber}</h1>
             </div>
         </>
     )

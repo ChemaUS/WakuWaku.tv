@@ -36,11 +36,9 @@ function WatchListCard({ anime, user, watchStatus }) {
                 {
                     user !== null ?
                         <>
-                            <br />
-                            <br />
+
                             <button onClick={e => handleFavClick()}>Remove from WatchList</button>
-                            <br />
-                            <br />
+
                         </>
                         : null
                 }

@@ -2,46 +2,47 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Login({ user, loginUser }) {
-    const [userName, setUserName] = useState("")
-    const [userEmail, setEmail] = useState("")
-    const [userPassword, setPassword] = useState("")
-    const [userAvatar, setUserAvatar] = useState("")
+    // const [userName, setUserName] = useState("")
+    // const [userEmail, setEmail] = useState("")
+    // const [userPassword, setPassword] = useState("")
+    // const [userAvatar, setUserAvatar] = useState("")
     const [loginUserName, setLoginUserName] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    const [loginState, setLoginState] = useState(true)
+    // const [loginState, setLoginState] = useState(true)
+    const [error, setError] = useState('')
 
-    const userObj = {
-        username: userName,
-        email: userEmail,
-        password: userPassword,
-        // password_confirmation: passwordConfirmation,
-        isAdmin: false,
+    // const userObj = {
+    //     username: userName,
+    //     email: userEmail,
+    //     password: userPassword,
+    //     // password_confirmation: passwordConfirmation,
+    //     isAdmin: false,
 
-    }
+    // }
 
     function handleLogin(e) {
         e.preventDefault()
         fetch("/login", {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({
-                username: loginUserName,
-                password: loginPassword
-            })
+            body: JSON.stringify({ loginUserName, loginPassword })
         })
-            .then(resp => resp.json())
+            .then(r => r.json())
             .then(data => {
-                console.log(data)
-                loginUser(data)
+                if (data.id) {
+
+                    loginUser(data);
+                    // history.push("/HomePage")
+                } else if (data.error) {
+                    setError(data.error)
+                }
             })
-        e.target.reset()
-        // history("/")
     }
     return (
         <>
             <div className="login-box">
                 <form onSubmit={handleLogin}>
-                    {/* <h1 className="pageHeader">Have an account? Login!</h1> */}
+                    <p style={{ color: 'red' }}>{error ? error : null}</p>
                     <div className='user-box'>
                         <input type="text" name="loginUsername" onChange={e => setLoginUserName(e.target.value)}></input>
                         <label>Username:</label>
