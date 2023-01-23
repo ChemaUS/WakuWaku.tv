@@ -271,8 +271,8 @@ right:10%
 .card-list{
 background: #2a2c31;
 margin-left:40px;
-height:450px;
-width:280px
+height:470px;
+width:280px;
 }
 .card-img{
   height:280px;
@@ -281,13 +281,14 @@ width:280px
 .type_of_media{
   font-size: 14px;
   margin-left:10px;
-  color:#aaa
+  color:#aaa;
+
 }
 .card_genre{
   font-size: 13px;
   margin-left:10px;
-  color:#aaa
- 
+  color:#aaa;
+
 }
 .card-title{
   font-size: 14px;
@@ -439,23 +440,60 @@ align-items:center;
 }
 .profilePicture {
   display: inline-block;
-  width: 200px;
+  width: 100px;
   border-style: solid;
-  border-color: rgb(243, 243, 41);
-  border-radius: 8px;
+  border-color: rgb(216, 16, 216);
+  border-radius: 100%;
   text-align: left;
   float: left;
+  margin-right:25px
+  
 }
 .bookmarkicon {
   width: 30px;
 }
 .nav-pfp{
   border-radius:100%;
+  border-style: solid;
     height: 48px;
     aspect-ratio: auto 48 / 48;
     width: 48px;
-    
- 
- 
+    border-color: rgb(216, 16, 216)
 }
+.pfp-bookmark{
+  height: 8rem;
+    width: 8rem;
+}
+.pfp-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0px;
+  row-gap: 20px;
+ text-align: left;
+align-items:center;
+margin-left:40px;
+}
+.pfp-header{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+.my-watchlist{
+font-size:35px
+}
+.hr{
+  width:50%
+}
+.remove-from-wtchlist{
 
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height:1.5rem;
+  text-align:center;
+  color: rgb(17,17,17);
+  margin-top:40px;
+  margin-left:40px
+}

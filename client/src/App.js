@@ -123,7 +123,7 @@ function App() {
 
           {anime.map((anime) => {
             return (
-              <Route path={`/:${anime.title}`}>
+              <Route path={`/${anime.id}/anime`}>
                 <AnimeInfo anime={anime} key={anime.id} />
               </Route>
             )

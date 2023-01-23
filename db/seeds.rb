@@ -9,7 +9,7 @@ Episode.destroy_all
 anime1 = Anime.create(title:'5 Centimeters per Second', 
 img:'https://gogocdn.net/images/anime/22319.jpg', 
 format:"Movie",
-genre:["Drama", "Romance"],
+genre:["Drama","", "Romance"],
 popular:false,
 episodeCount:1,
 description: "What happens when two people love each other but just aren't meant to be together? Takaki Toono and Akari Shinohara are childhood friends, but circumstances beyond their control tear them apart. They promise to stay in contact, and although the progression of time widens the distance between them, the chain of memories remains ever-present.
@@ -19,7 +19,7 @@ Byousoku 5 Centimeter is a romantic drama that focuses on the mundane and harsh 
 anime2= Anime.create(title:'Dragon Ball Super: Broly', 
 img:'https://gogocdn.net/cover/dragon-ball-super-movie-broly.png',
 format:"Movie",
-genre:["Action", "Adventure", "Fantasy"],
+genre:["Action","", "Adventure","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description: "Forty-one years ago on Planet Vegeta, home of the infamous Saiyan warrior race, King Vegeta noticed a baby named Broly whose latent power exceeded that of his own son. Believing that Broly's power would one day surpass that of his child, Vegeta, the king sends Broly to the desolate planet Vampa. Broly's father Paragus follows after him, intent on rescuing his son. 
@@ -31,7 +31,7 @@ Once there, Frieza shows off his new allies: Paragus and the now extremely power
 anime3 = Anime.create(title:"Fate/Stay Night Movie: Heaven's Feel - I. Presage Flower", 
 img:'https://gogocdn.net/cover/fatestay-night-movie-heavens-feel-i-presage-flower.png', 
 format:"Movie",
-genre:["Action", "Fantasy", "Supernatural"],
+genre:["Action","", "Fantasy","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description: "The Holy Grail War: a violent battle between mages in which seven masters and their summoned servants fight for the Holy Grail, a magical artifact that can grant the victor any wish.
@@ -45,7 +45,7 @@ When a mysterious shadow begins a murderous spree in Fuyuki City, Shirou aligns 
 anime4 = Anime.create(title:"Fate/Stay Night Movie: Heaven's Feel - II. Lost Butterfly", 
 img:'https://gogocdn.net/cover/fatestay-night-movie-heavens-feel-ii-lost-butterfly.png',
 format:"Movie",
-genre:["Action", "Fantasy", "Supernatural"],
+genre:["Action","", "Fantasy","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description: "The Fifth Holy Grail War continues, and the ensuing chaos results in higher stakes for all participants. 
@@ -57,7 +57,7 @@ Fate/stay night Movie: Heaven's Feel - II. Lost Butterfly continues to focus on 
 anime5 = Anime.create(title:"Fate/Stay Night Movie: Heaven's Feel - III. Spring Song", 
 img:'https://gogocdn.net/cover/fatestay-night-movie-heavens-feel-iii-spring-song-dub.png', 
 format:"Movie",
-genre:["Action", "Fantasy", "Supernatural"],
+genre:["Action","", "Fantasy","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description: "The Fifth Holy Grail War in Fuyuki City has reached a turning point in which the lives of all participants are threatened as the hidden enemy finally reveals itself.
@@ -69,7 +69,7 @@ As the final act of this chaotic war commences, the ideals Shirou believes will 
 anime6 = Anime.create(title:"Howl's Moving Castle", 
 img:'https://gogocdn.net/images/anime/H/Howls-Moving-Castle.jpg', 
 format:"Movie",
-genre:["Adventure", "Award Winning", "Drama", "Fantasy", "Romance"],
+genre:["Adventure","", "Award Winning","", "Drama","", "Fantasy","", "Romance"],
 popular:false,
 episodeCount:1,
 description: "That jumbled piece of architecture, that cacophony of hissing steam and creaking joints, with smoke billowing from it as it moves on its own... 
@@ -81,7 +81,7 @@ In an endeavor to return to normal, Sophie must accompany Howl and a myriad of e
 anime7 = Anime.create(title:"Josee, the Tiger and the Fish", 
 img:'https://gogocdn.net/cover/josee-to-tora-to-sakana-tachi.png',
 format:"Movie",
-genre:["Drama", "Romance"],
+genre:["Drama","", "Romance"],
 popular:false,
 episodeCount:1,
 description: "Equipped with his passion for diving and admiration for marine biology, university student Tsuneo Suzukawa tries his best to juggle several part-time jobs to earn enough money to study abroad. 
@@ -94,7 +94,7 @@ Changing his mind, Tsuneo decides to accompany Josee in exploring the wonders th
 anime8 = Anime.create(title:'Jujutsu Kaisen 0', 
 img:'https://gogocdn.net/cover/jujutsu-kaisen-0.png', 
 format:"Movie",
-genre:["Action", "Fantasy"],
+genre:["Action","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description: "Violent misfortunes frequently occur around 16-year-old Yuuta Okkotsu, a timid victim of high school bullying. Yuuta is saddled with a monstrous curse, a power that dishes out brutal revenge against his bullies. 
@@ -106,7 +106,7 @@ Yuuta clumsily utilizes Rika on missions with the other first-year students, but
 anime9 = Anime.create(title:'Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train', 
 img:'https://gogocdn.net/cover/kimetsu-no-yaiba-movie-mugen-ressha-hen-camrip.png', 
 format:"Movie",
-genre:["Action", "Fantasy"],
+genre:["Action","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description: "After a string of mysterious disappearances begin to plague a train, the Demon Slayer Corps' multiple attempts to remedy the problem prove fruitless. 
@@ -118,7 +118,7 @@ Kimetsu no Yaiba Movie: Mugen Ressha-hen delves into the deepest corners of Tanj
 anime10 = Anime.create(title:'Your Name', 
 img:'https://gogocdn.net/cover/kimi-no-na-wa.jpg',
 format:"Movie",
-genre:["Award Winning", "Drama", "Supernatural"],
+genre:["Award Winning","", "Drama","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description: "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. 
@@ -130,7 +130,7 @@ Kimi no Na wa. revolves around Mitsuha and Taki's actions, which begin to have a
 anime11 = Anime.create(title:'I Want To Eat Your Pancreas', 
 img:'https://gogocdn.net/cover/kimi-no-suizou-wo-tabetai.png',
 format:"Movie",
-genre:["Drama", "Romance"],
+genre:["Drama","", "Romance"],
 popular:false,
 episodeCount:1,
 description: "The aloof protagonist: a bookworm who is deeply detached from the world he resides in. He has no interest in others and is firmly convinced that nobody has any interest in him either. 
@@ -142,7 +142,7 @@ As the pair of polar opposites interact, their connection strengthens, interweav
 anime12 = Anime.create(title:'A Silent Voice', 
 img:'https://cdn.myanimelist.net/images/anime/3/80136.jpg',
 format:"Movie",
-genre:["Award Winning", "Drama"],
+genre:["Award Winning","", "Drama"],
 popular:false,
 episodeCount:1,
 description: "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. 
@@ -154,7 +154,7 @@ Koe no Katachi tells the heartwarming tale of Shouya's reunion with Shouko and h
 anime13 = Anime.create(title:'Spirited Away', 
 img:'https://cdn.myanimelist.net/images/anime/6/79597.jpg',
 format:"Movie",
-genre:["Adventure", "Award Winning", "Supernatural"],
+genre:["Adventure", "","Award Winning","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"Stubborn, spoiled, and naïve, 10-year-old Chihiro Ogino is less than pleased when she and her parents discover an abandoned amusement park on the way to their new house. 
@@ -166,7 +166,7 @@ Vivid and intriguing, Sen to Chihiro no Kamikakushi tells the story of Chihiro's
 anime14 = Anime.create(title:'Sword Art Online the Movie: Progressive - Aria of a Starless Night', 
 img:'https://cdn.myanimelist.net/images/anime/1590/116274.jpg',
 format:"Movie",
-genre:["Action", "Adventure", "Fantasy"],
+genre:["Action","", "Adventure","", "Fantasy"],
 popular:true,
 episodeCount:1,
 description:"Excelling socially and academically, Asuna Yuuki is on track to ace her high school entrance exams. 
@@ -179,7 +179,7 @@ With SAO now turned into a nightmare death trap, Asuna and other gamers—such a
 anime15= Anime.create(title:"Sword Art Online Movie: Ordinal Scale",
 img:"https://cdn.myanimelist.net/images/anime/1557/123313.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Fantasy"],
+genre:["Action","", "Adventure","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description:"In 2026, four years after the infamous Sword Art Online incident, a revolutionary new form of technology has emerged: the Augma, a device that utilizes an Augmented Reality system.
@@ -191,7 +191,7 @@ Following the new craze, Kirito's friends dive into the game, and despite his re
 anime16=Anime.create(title:"Weathering with You",
 img:"https://cdn.myanimelist.net/images/anime/1880/101146.jpg",
 format:"Movie",
-genre:["Award Winning", "Drama", "Fantasy", "Romance"],
+genre:["Award Winning","", "Drama","", "Fantasy","", "Romance"],
 popular:false,
 episodeCount:1,
 description:"Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end. Amidst this seemingly eternal downpour arrives the runaway high school student Hodaka Morishima, who struggles to financially support himself—ending up with a job at a small-time publisher. At the same time, the orphaned Hina Amano also strives to find work to sustain herself and her younger brother.
@@ -201,7 +201,7 @@ Both fates intertwine when Hodaka attempts to rescue Hina from shady men, decidi
 anime17=Anime.create(title:"Boruto: Naruto the Movie",
 img:"https://cdn.myanimelist.net/images/anime/4/78280.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Fantasy"],
+genre:["Action","", "Adventure","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description:"The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. Upon learning that his father will watch the aspiring ninjas who will participate in the upcoming Chunin exams, Boruto is driven to prove to him that he is worthy of his attention. In order to do so, he enlists the help of Naruto's childhood friend and rival, Sasuke Uchiha.
@@ -211,7 +211,7 @@ The Chunin exams begin and progress smoothly, until suddenly, the Konohagakure i
 anime18=Anime.create(title:"Rascal Does Not Dream of a Dreaming Girl",
 img:"https://cdn.myanimelist.net/images/anime/1613/102179.jpg",
 format:"Movie",
-genre:["Drama", "Romance", "Supernatural"],
+genre:["Drama","", "Romance","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"Six months ago, Sakuta Azusagawa had a chance encounter with a bunny girl in a library. Ever since then, he's been blissfully happy with his girlfriend: Mai Sakurajima, that same bunny girl. However, the reappearance of his mysterious first crush, the now-adult Shouko Makinohara, adds a new complication to his relationship with Mai. To make matters worse, he then encounters a middle school Shouko in the hospital, suffering from a grave illness. Mysteriously, his old scars begin throbbing whenever he's near her.
@@ -221,7 +221,7 @@ With Shouko's bizarre situation somehow revolving around him, Sakuta will need t
 anime19=Anime.create(title:"Evangelion: 1.0 You Are (Not) Alone",
 img:"https://cdn.myanimelist.net/images/anime/7/74975.jpg",
 format:"Movie",
-genre:[ "Action", "Award Winning", "Drama", "Sci-Fi"],
+genre:[ "Action","", "Award Winning","", "Drama","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"In a post-apocalyptic world, the last remaining human settlement in Japan is the heavily fortified city of Tokyo-3. Fourteen-year-old Shinji Ikari is brought to the headquarters of NERV, an underground organization lead by his estranged father, Gendou. He requests that Shinji become a pilot of an 'Evangelion,' a colossal android built to fight against monstrous and destructive alien creatures known as 'Angels' that wreak havoc on the planet and threaten the survival of the remaining human race.
@@ -232,7 +232,7 @@ Although initially reluctant, Shinji is swayed by the idea of reconciling with h
 anime20=Anime.create(title:"Evangelion: 2.0 You Can (Not) Advance",
 img:"https://cdn.myanimelist.net/images/anime/5/74983.jpg",
 format:"Movie",
-genre:["Action", "Drama", "Sci-Fi"],
+genre:["Action","", "Drama","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"When the threat of the Angel menace escalates, mankind's defense force is pushed to its limits, with NERV at the forefront of the struggle. Shinji Ikari and his partner Rei Ayanami are assisted by two new pilots: the fiery Asuka Langley Shikinami and the mysterious Mari Illustrious Makinami.
@@ -243,7 +243,7 @@ With the aid of their mechanized Evangelion units, equipped with weapons perfect
 anime21=Anime.create(title:"Evangelion: 3.0 You Can (Not) Redo",
 img:"https://cdn.myanimelist.net/images/anime/9/43201.jpg",
 format:"Movie",
-genre:["Action", "Award Winning", "Drama", "Sci-Fi"],
+genre:["Action","", "Award Winning","", "Drama","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Fourteen years after the Third Impact, the Earth is a post-apocalyptic wasteland, human civilization is in ruins, and the people Shinji Ikari knows are almost unrecognizable. Trapped inside Evangelion Unit-01, he is recovered from space by Asuka Langley Shikinami and Mari Illustrious Makinami, only to find himself a prisoner of WILLE, a military faction led by his former guardian Misato Katsuragi. Cold and bitter, his former allies view him with suspicion and refuse to support him as he comes to terms with the consequences of his actions.
@@ -253,7 +253,7 @@ A hurt and confused Shinji is rescued from WILLE by Rei Ayanami and returned to 
 anime22=Anime.create(title:"Evangelion: 3.0+1.0 Thrice Upon a Time",
 img:"https://cdn.myanimelist.net/images/anime/1422/113533.jpg",
 format:"Movie",
-genre:["Action", "Award Winning", "Drama", "Sci-Fi", "Suspense"],
+genre:["Action","", "Award Winning","", "Drama","", "Sci-Fi","", "Suspense"],
 popular:false,
 episodeCount:1,
 description:"Following NERV's failed attempt to retrieve the Spears of Longinus and carry out the Human Instrumentality Project, the destruction caused by the Fourth Impact has been largely averted. In a state of disarray, Shinji Ikari, Asuka Langley Shikinami, and Rei Ayanami travel to Village 3—a survivor settlement free from Earth's ruination. There, Shinji slowly comes to terms with his past, developing an entirely different life from his days as an Evangelion pilot.
@@ -264,7 +264,7 @@ Meanwhile, NERV makes preparations to continue the Instrumentality Project by me
 anime23=Anime.create(title:"Gintama: The Final",
 img:"https://cdn.myanimelist.net/images/anime/1988/113791.jpg",
 format:"Movie",
-genre:["Action", "Comedy", "Drama", "Sci-Fi"],
+genre:["Action","", "Comedy","", "Drama","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Two years have passed following the Tendoshuu's invasion of the O-Edo Central Terminal. Since then, the Yorozuya have gone their separate ways. Foreseeing Utsuro's return, Gintoki Sakata begins surveying Earth's ley lines for traces of the other man's Altana. After an encounter with the remnants of the Tendoshuu—who continue to press on in search of immortality—Gintoki returns to Edo.
@@ -275,7 +275,7 @@ Later, the regrouped Shinsengumi and Yorozuya begin an attack on the occupied Ce
 anime24=Anime.create(title:"Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien Nare",
 img:"https://cdn.myanimelist.net/images/anime/10/51723.jpg",
 format:"Movie",
-genre:["Action", "Comedy", "Sci-Fi"],
+genre:["Action","", "Comedy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"When Gintoki apprehends a movie pirate at a premiere, he checks the camera's footage and finds himself transported to a bleak, post-apocalyptic version of Edo, where a mysterious epidemic called the 'White Plague' has ravished the world's population. It turns out that the movie pirate wasn't a pirate after all—it was an android time machine, and Gintoki has been hurtled five years into the future! Shinpachi and Kagura, his Yorozuya cohorts, have had a falling out and are now battle-hardened solo vigilantes and he himself has been missing for years, disappearing without a trace after scribbling a strange message in his journal.
@@ -285,7 +285,7 @@ Setting out in the disguise given to him by the android time machine, Gintoki ha
 anime25=Anime.create(title:"Kizumonogatari Part 1: Iron-Blooded",
 img:"https://cdn.myanimelist.net/images/anime/1783/112810.jpg",
 format:"Movie",
-genre:["Action", "Mystery", "Supernatural"],
+genre:["Action","", "Mystery","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"During Koyomi Araragi's second year at Naoetsu Private High School, he has a chance encounter with Tsubasa Hanekawa, the top honor student in his class. When they strike up a conversation, Hanekawa mentions a shocking rumor: a vampire with beautiful blonde hair and freezing cold eyes has been seen lurking around town.
@@ -296,7 +296,7 @@ When he arrives at the source of the blood, he is terrified by what he sees—th
 anime26=Anime.create(title:"Kizumonogatari Part 2: Hot-Blooded",
 img:"https://cdn.myanimelist.net/images/anime/1981/112812.jpg",
 format:"Movie",
-genre:["Action", "Mystery", "Supernatural"],
+genre:["Action","", "Mystery","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"No longer truly human, Koyomi Araragi decides to retrieve Kiss-shot Acerola-orion Heart-under-blade's severed body parts that were stolen by three powerful vampire hunters. Awaiting him are Dramaturgie, a vampire hunter who is a vampire himself; Episode, a half-vampire with the ability to transform into mist; and Guillotinecutter, a human priest who is the most dangerous of them all.
@@ -306,7 +306,7 @@ Unbeknownst to Araragi, each minute he spends trying to retrieve Kiss-shot's lim
 anime27=Anime.create(title:"Kizumonogatari Part 3: Cold-Blooded",
 img:"https://cdn.myanimelist.net/images/anime/1084/112813.jpg",
 format:"Movie",
-genre:["Action", "Mystery", "Supernatural"],
+genre:["Action","", "Mystery","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"After helping revive the legendary vampire Kiss-shot Acerola-orion Heart-under-blade, Koyomi Araragi has become a vampire himself and her servant. Kiss-shot is certain she can turn him back into a human, but only once regaining her full power.
@@ -318,7 +318,7 @@ Araragi is at his limit but he must come to a decision, and it may not be possib
 anime28=Anime.create(title:"Made in Abyss: Journey's Dawn",
 img:"https://cdn.myanimelist.net/images/anime/1173/95167.jpg",
 format:"Movie",
-genre:["Adventure", "Drama", "Fantasy", "Mystery", "Sci-Fi"],
+genre:["Adventure","", "Drama","", "Fantasy","","Mystery","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"The movie is a compilation of episodes 1-8 of the 2017 television series with new scenes added for the introduction. It covers the period from when Riko descends into the Abyss with her robot companion Reg, reaching the second layer where they meet the White Whistle Ozen who reveals information about Riko's mother.")
@@ -327,7 +327,7 @@ description:"The movie is a compilation of episodes 1-8 of the 2017 television s
 anime29=Anime.create(title:"Made in Abyss: Wandering Twilight",
 img:"https://cdn.myanimelist.net/images/anime/1336/95168.jpg",
 format:"Movie",
-genre:["Adventure", "Drama", "Fantasy", "Mystery", "Sci-Fi"],
+genre:["Adventure","", "Drama","", "Fantasy","","Mystery","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"he movie is a compilation of episodes 9-13 of the 2017 television series. Riko and Reg descend to the third layer where Riko has her first experience of the Curse. They descend to the fourth layer where Riko's arm is injured by an Orbed Piercer and Reg tries to save her. Nanachi comes to their aid and saves Riko's poisoned arm. In return Nanachi asks Reg to kill her immortal companion Mitty. Nanachi then joins Riko and Reg in their quest to reach the bottom of the Abyss.")
@@ -336,7 +336,7 @@ description:"he movie is a compilation of episodes 9-13 of the 2017 television s
 anime30=Anime.create(title:"Made in Abyss: Dawn of the Deep Soul",
 img:"https://cdn.myanimelist.net/images/anime/1502/110723.jpg",
 format:"Movie",
-genre:["Adventure", "Drama", "Fantasy", "Mystery", "Sci-Fi"],
+genre:["Adventure","", "Drama","", "Fantasy","","Mystery","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"After bonding over a tragic loss, the long-suffering Nanachi joins Riko and Reg on their journey into the depths of the Abyss. Awaiting the children is the Sea of Corpses—the Abyss's fifth layer, and the deepest level from which a traveler can return without losing their human form.
@@ -347,7 +347,7 @@ Bondrewd's only apparent weakness is Prushka, a brash child who claims to be his
 anime31=Anime.create(title:"The Last: Naruto the Movie",
 img:"https://cdn.myanimelist.net/images/anime/10/67631.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Fantasy", "Romance"],
+genre:["Action","", "Adventure","", "Fantasy","", "Romance"],
 popular:false,
 episodeCount:1,
 description:"Two years have passed since the end of the Fourth Great Ninja War. Konohagakure has remained in a state of peace and harmony—until Sixth Hokage Kakashi Hatake notices the moon is dangerously approaching the Earth, posing the threat of planetary ruin.
@@ -358,7 +358,7 @@ With her abduction, the relationships the team share with one another are tested
 anime32=Anime.create(title:"The Disappearance of Haruhi Suzumiya",
 img:"https://cdn.myanimelist.net/images/anime/1248/112352.jpg",
 format:"Movie",
-genre:["Mystery", "Sci-Fi", "Supernatural"],
+genre:["Mystery","", "Sci-Fi","", "Supernatural"],
 popular:false,
 episodeCount:1,
 description:"On a cold December day, Kyon arrives at school prepared for another outing with his fellow SOS Brigade members. However, much to his surprise, he discovers that almost everything has changed completely: Haruhi Suzumiya and Itsuki Koizumi are nowhere to be found; Mikuru Asahina does not recognize him at all; Yuki Nagato is a regular human; and Ryouko Asakura has mysteriously returned. Although he is no stranger to the supernatural, Kyon is disturbed by this odd turn of events and decides to investigate on his own.
@@ -368,7 +368,7 @@ Finding himself to be the only person that is aware of the previous reality, Kyo
 anime33=Anime.create(title:"Princess Mononoke",
 img:"https://cdn.myanimelist.net/images/anime/7/75919.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Award Winning", "Fantasy"],
+genre:["Action","", "Adventure","", "Award Winning","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description:"When an Emishi village is attacked by a fierce demon boar, the young prince Ashitaka puts his life at stake to defend his tribe. 
@@ -379,7 +379,7 @@ With its dying breath, the beast curses the prince's arm, granting him demonic p
 anime34=Anime.create(title:"Violet Evergarden Movie",
 img:"https://cdn.myanimelist.net/images/anime/1825/110716.jpg",
 format:"Movie",
-genre:["Award Winning", "Drama", "Fantasy"],
+genre:["Award Winning","", "Drama","", "Fantasy"],
 popular:false,
 episodeCount:1,
 description:"Several years have passed since the end of The Great War. As the radio tower in Leidenschaftlich continues to be built, telephones will soon become more relevant, leading to a decline in demand for 'Auto Memory Dolls.' Even so, Violet Evergarden continues to rise in fame after her constant success with writing letters. However, sometimes the one thing you long for is the one thing that does not appear.
@@ -389,7 +389,7 @@ Violet Evergarden Movie follows Violet as she continues to comprehend the concep
 anime35=Anime.create(title:"Dragon Ball Z: Dead Zone",
 img:"https://cdn.myanimelist.net/images/anime/1258/90343.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Piccolo is training at a barren cliff when a handful of mysterious enemies attacks and defeats him. These same enemies then go to Mount Paozu to steal Gohan Son's 'Dragon Ball.' Upon arrival, not only do they defeat Gokuu Son's spouse and father-in-law—Chi-Chi and Gyumao, respectively—but they also kidnap Gohan in the process.
@@ -399,7 +399,7 @@ Feeling something isn't right, Gokuu rushes home, only to find Chi-Chi lying on 
 anime36=Anime.create(title:"Dragon Ball Z: The World's Strongest",
 img:"https://cdn.myanimelist.net/images/anime/1017/90344.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"In his laboratory, biotechnology expert Dr. Kochin gathers the dragon balls intending to free his master Dr. Uirou, a mad scientist hellbent on ruling the world, forever frozen in the never-melting ice of the Tsurumai-Tsuburi Mountains. Attempting to locate the dragon balls, Gohan Son and Oolong arrive at the scene and are ambushed by several creatures known as 'Bio-Men.' Training nearby, Piccolo attempts to save them but is then attacked by three mysterious warriors. When the ice beneath them breaks, it cuts their altercation short, burying Gohan and Oolong within.
@@ -409,7 +409,7 @@ After regaining consciousness, they return home to Kame House only to encounter 
 anime37=Anime.create(title:"Dragon Ball Z: The Tree of Might",
 img:"https://cdn.myanimelist.net/images/anime/1956/90345.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"A mysterious device crashes on planet Earth, causing a wildfire near where Gohan Son, Kuririn, Bulma, and Oolong are camping. Unable to fully save the forest, they decide to use the Dragon Balls to restore it to its previous condition. A few days later, a group of unknown warriors plant a seed where the mysterious device had crashed, sprouting a colossal tree that destroys the forest and neighboring cities in the process.
@@ -420,7 +420,7 @@ North Kaio contacts Gokuu Son and tells him that this tree is the 'Shinseiju'—
 anime38=Anime.create(title:"Dragon Ball Z: Lord Slug",
 img:"https://cdn.myanimelist.net/images/anime/1620/93667.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Gohan Son and Piccolo are peacefully playing when they sense a powerful entity approaching Earth. It soon reaches everyone's ears that this entity is in fact a small planet on a deadly collision course with Earth. Gokuu Son and Kuririn attempt to change the small planet's path with a Kamehameha, but the attack fails and the two warriors are blown away. However, after coming very close to Earth's surface, the object changes direction on its own and explodes soon after.
@@ -430,7 +430,7 @@ The small planet reveals itself to be a vehicle for what seems to be a castle. A
 anime39=Anime.create(title:"Dragon Ball Z: Cooler's Revenge",
 img:"https://cdn.myanimelist.net/images/anime/1113/121523.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Gokuu Son and his friends are out camping when three mysterious enemies ambush them. After a quick fight, a fourth enemy named Cooler joins the fray. Seeking retribution for his younger brother Frieza after he was defeated, Cooler attacks Gokuu; however, the latter manages to escape with Gohan Son and goes into hiding. Unsatisfied and infuriated with the outcome, Cooler and his men begin the hunt to uncover Gokuu's location and kill him to carry out their plans of exacting revenge.")
@@ -439,7 +439,7 @@ description:"Gokuu Son and his friends are out camping when three mysterious ene
 anime40=Anime.create(title:"Dragon Ball Z: The Return of Cooler",
 img:"https://cdn.myanimelist.net/images/anime/1007/93669.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"A mysterious entity known as the 'Big Gete Star' clings onto planet New Namek to absorb its energy, putting all Namekians in grave danger. Dende, Earth's new guardian, learns about the prevailing situation in his homeland and quickly requests Gokuu Son and his friends for help.
@@ -449,7 +449,7 @@ Upon arrival in New Namek, they discover that the Namekians are held captive by 
 anime41=Anime.create(title:"Dragon Ball Z: Super Android 13!",
 img:"https://cdn.myanimelist.net/images/anime/1723/93670.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Dr. Gero's Androids #13, #14, and #15 are awakened by the laboratory computers and immediately head to the mall where Goku is shopping. After Goku, Trunks, and Vegeta defeat #14 and #15, #13 absorbs their inner computers and becomes a super being greater than the original three separately were. Now it is up to Goku to stop him.")
@@ -457,7 +457,7 @@ description:"Dr. Gero's Androids #13, #14, and #15 are awakened by the laborator
 anime42=Anime.create(title:"Dragon Ball Z: Broly - The Legendary Super Saiyan",
 img:"https://cdn.myanimelist.net/images/anime/1451/121524.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"As Goku investigates the destruction of the Southern Galaxy, Vegeta is taken to be King of the New Planet Vegeta, and to destroy the Legendary Super Saiyan, Broly.")
@@ -466,7 +466,7 @@ description:"As Goku investigates the destruction of the Southern Galaxy, Vegeta
 anime43=Anime.create(title:"Dragon Ball Z: Bojack Unbound",
 img:"https://cdn.myanimelist.net/images/anime/1730/93672.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Mr. Money is holding another Tenka'ichi Budokai and Mr. Satan invites everyone in the world to join in. Little does he know that Bojack, an ancient villain who has escaped his prison, is competing. Since Goku is currently dead, it is up to Gohan, Vegeta, and Trunks to defeat Bojack and his henchman.")
@@ -475,7 +475,7 @@ description:"Mr. Money is holding another Tenka'ichi Budokai and Mr. Satan invit
 anime44=Anime.create(title:"Dragon Ball Z: Broly - Second Coming",
 img:"https://cdn.myanimelist.net/images/anime/1191/93673.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"After his loss to Goku, Broly crash lands and hibernates on earth. After some time, he is awakened by Trunks and Goten, who Broly believes is Kakarott, and goes on a rampage to kill both of them. At the same time, Gohan is on his way to challenge the Legendary Super Saiyan alone.")
@@ -484,7 +484,7 @@ description:"After his loss to Goku, Broly crash lands and hibernates on earth. 
 anime45=Anime.create(title:"Dragon Ball Z: Bio-Broly",
 img:"https://cdn.myanimelist.net/images/anime/1035/93674.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Jaga Bada, Mr. Satan's old sparring partner, has invited Satan to his personal island to hold a grudge match. Trunks and Goten decide to come for the adventure and Android #18 is following Satan for the money he owes her. Little do they know that Jaga Bada's scientist have found a way to resurrect Broly, the legendary Super Saiyan.
@@ -494,7 +494,7 @@ Edit")
 anime46=Anime.create(title:"Dragon Ball Z: Fusion Reborn",
 img:"https://cdn.myanimelist.net/images/anime/1015/93675.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"After a janitorial mishap, an unsuspecting custodian transforms into Janemba, a fat, yellow demon who wreaks havoc throughout the afterlife. Gokuu Son has been competing in martial arts tournaments for the undead since his heroic death in the battle against Cell. Soon, Janemba's chaos draws Gokuu and fellow combatant Pikkon toward him, forcing the pair to figure out a way to defeat the giant monster.
@@ -504,7 +504,7 @@ After a bout with him, Gokuu witnesses Janemba undergo another transformation: t
 anime47=Anime.create(title:"Dragon Ball Z: Wrath of the Dragon",
 img:"https://cdn.myanimelist.net/images/anime/1704/93676.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"The Z Warriors discover an unopenable music box and are told to open it with the dragon balls. The contents turn out to be a warrior named Tapion who had sealed himself inside along with a monster called Hildegarn. Goku must now perfect a new technique to defeat the ev")
@@ -513,7 +513,7 @@ description:"The Z Warriors discover an unopenable music box and are told to ope
 anime48=Anime.create(title:"Dragon Ball Z: Battle of Gods",
 img:"https://cdn.myanimelist.net/images/anime/1734/93678.jpg",
 format:"Movie",
-genre:["Action", "Adventure", "Comedy", "Fantasy", "Sci-Fi"],
+genre:["Action", "Adventure","", "Comedy","", "Fantasy","", "Sci-Fi"],
 popular:false,
 episodeCount:1,
 description:"Following the defeat of a great adversary, Gokuu Son and his friends live peaceful lives on Earth. Meanwhile, in space, Beerus the God of Destruction awakens from his long slumber, having dreamed of an entity known as a Super Saiyan God. With the help of his assistant, Whis, Beerus looks for this powerful being, as he wishes to fight a worthy opponent. After discovering that the Saiyan home planet was destroyed, he tracks down the remaining Saiyans on Earth, looking for Gokuu specifically.
