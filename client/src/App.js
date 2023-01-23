@@ -6,16 +6,15 @@ import Signup from './components/Signup'
 import NavBar from './components/NavBar';
 import ProfilePage from "./components/ProfilePage";
 import images from "./images/Header.jpeg"
-// import AnimeInfo from "./HomePage/AnimeInfo";
-// import AnimeCardLandingPage from "./HomePage/AnimeCardLandingPage";
 import AnimeInfo from "./HomePage/AnimeInfo";
-
+import Video from "./HomePage/Video"
 
 
 function App() {
   const [user, loginUser] = useState(null)
   const [anime, setAnime] = useState([]);
   const [search, setSearch] = useState("")
+  const [episodes, setEpisodes] = useState([])
 
   useEffect(() => {
     fetch('/me')
@@ -47,6 +46,12 @@ function App() {
   }, []);
   const searchName = anime.filter((animeName) => animeName.title.toLowerCase().includes(search.toLowerCase()))
 
+  useEffect(() => {
+    fetch('/episodes')
+      .then(r => r.json())
+      .then(data => setEpisodes(data))
+  }, [])
+
   return (
     <>
       <NavBar handleLogout={handleLogout} user={user} />
@@ -71,15 +76,6 @@ function App() {
           <Route exact path="/Home" >
             <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} />
           </Route>
-          {anime.map(anime => {
-            return (
-              <Route path={`/:${anime.title}`}>
-                <AnimeInfo anime={anime} key={anime.id} />
-              </Route>
-            )
-          })}
-
-
 
           <Route exact path="/login">
             <div className='landing-page-bkgrnd'>
@@ -105,6 +101,23 @@ function App() {
           </Route>
 
           <Route exact path="/profile"> <ProfilePage user={user} /> </Route>
+
+          {anime.map((anime) => {
+            return (
+              <Route path={`/:${anime.title}`}>
+                <AnimeInfo anime={anime} key={anime.id} />
+              </Route>
+            )
+          })};
+
+          {episodes.map((episodes) => {
+            return (
+              <Route path={`/${episodes.id}/video`}>
+                <Video episodes={episodes} key={episodes.id} anime={anime} />
+              </Route>
+            )
+          })}
+
 
         </Switch>
       </div>

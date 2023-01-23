@@ -1,18 +1,15 @@
 import AnimeList from "./AnimeList";
 import Search from "./Search";
 import React, { useEffect, useState } from "react"
+import HomepageBkMrks from "../HomePage/HomePageBkMrks";
 function HomePage({ user, anime, search, setSearch }) {
-    // const [anime, setAnime] = useState([]);
-    // const [search, setSearch] = useState("")
-    // useEffect(() => {
-    //     fetch('/animes')
-    //         .then((r) => r.json())
-    //         .then((data) => setAnime(data));
-    // }, []);
-    // const searchName = anime.filter((animeName) => animeName.title.toLowerCase().includes(search.toLowerCase()))
+
+
 
     return (
         <>
+            <div className="homepage-bkmarks">d</div>
+            <HomepageBkMrks anime={anime} user={user} />
             <Search anime={anime} search={search} setSearch={setSearch} />
             <AnimeList user={user} anime={anime} />
         </>

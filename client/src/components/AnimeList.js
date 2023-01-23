@@ -4,10 +4,14 @@ function AnimeList({ anime, user }) {
     const animeCard = anime.map((animes) => {
         return <AnimeCard anime={animes} key={animes.id} />
     })
+
     return (
+        <>
         <div className="container">
-            {animeCard}
+                {animeCard}
         </div>
+        </>
+
     )
 }
 export default AnimeList

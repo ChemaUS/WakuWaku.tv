@@ -16,7 +16,7 @@ code {
 }
 
 .navbar{
-  background: #202125;
+  background: #2a2c31;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -320,3 +320,119 @@ align-items:center;
   .placeholder{
     text-decoration:none;
   }
+  .anime-info-container{
+    display:flex;
+    margin-top:0px;
+  position: absolute;
+  width: 76%;
+  height:100%;
+  }
+  .anime-info-img-bkgrnd{
+    width: 78%;
+    height: 100%;
+   position:absolute;
+   z-index:-1;
+   filter: blur(10px);
+   opacity: .35;
+  }
+
+  
+  .text-container{
+    display:block;
+    
+  }
+  .anime-info-img{
+    height:100%;
+  }
+  .anime-info-genre{
+    margin-top:40px;
+    margin-left:40px
+  }
+  .anime-info-count{
+    margin-top:40px;
+    margin-left:40px
+  }
+  .anime-info-description{
+   
+    font-size:15px;
+    line-height:30px;
+    margin-top:40px;
+    margin-left:40px
+  }
+  .anime-info-watch-now-btn{
+    margin-right:15px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height:1.5rem;
+    text-align:center;
+    color: rgb(17,17,17);
+    margin-top:40px;
+    margin-left:40px
+  }
+  .anime-info-title{
+    margin-left:40px;
+    line-height:30px
+  }
+  .anime-info-add-to-watchlist-btn{
+      margin-right:15px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height:1.5rem;
+    text-align:center;
+    color: rgb(17,17,17);
+  }
+  .video{
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+
+  .video-page-container {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(204,204,204);
+    background-position: 50% 25%;
+    line-height:19.6px;
+    height:100vh;
+    width:100%;
+    z-index:3;
+   background-image: url("./images/WakuWaku.png");
+  background-size: cover;
+  display:inline-block
+  }
+  .video-page-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(32,33,37);
+    background: -moz-linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
+    background: -webkit-linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
+    background: linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202125",endColorstr="#202125",GradientType=1);
+    }
+.video-container{
+  background:rgb(32,33,37);
+  position:absolute;
+  z-index:8;
+  top:21%;
+  left:0;
+  right:72%;
+  height:58%;
+}
+.homepage-bkmarks{
+  background-color:red
+}
