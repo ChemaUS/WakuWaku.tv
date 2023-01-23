@@ -1,6 +1,9 @@
 class WatchlistsController < ApplicationController
     skip_before_action :verify_authenticity_token
-
+def index
+    watchlist = Watchlist.all 
+    render json: watchlist
+end
     def destroy
         watchlist = Watchlist.find_by(anime_id: params[:id])
         anime = Anime.find(params[:id])

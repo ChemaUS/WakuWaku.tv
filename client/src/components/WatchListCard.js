@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
-function WatchListCard({ anime, user, watchStatus }) {
-    // const [watchlstStatus, setWatchlstFavStatus] = useState(watchStatus)
-    const [episodes, setEpisodes] = useState(anime)
+function WatchListCard({ anime, user, watchStatus, onDelete, watch }) {
+    const [watchlstFavStatus, setWatchlstFavStatus] = useState(watchStatus)
+    // const [episodes, setEpisodes] = useState(anime)
 
     // function handleDelete({ anime, user, watchStatus }) {
     //     fetch(`/animes/${anime.id}`, {
@@ -12,32 +13,29 @@ function WatchListCard({ anime, user, watchStatus }) {
     //         .then(resp => resp.json())
     //         .then(data => console.log(data))
     // }
-    function handleFavClick() {
+    function handleWatchClick() {
         fetch(`/watchlists/${anime.id}`, {
             method: 'DELETE',
             headers: { "content-type": "application/json" }
         })
-            .then(res => res.json())
-            .then(data => console.log(data))
-    }
-
-    function handleClick() {
-        fetch(`/episodes/${episodes.id}`)
             .then(r => r.json())
-            .then(data => setEpisodes(data))
-
+            .then(() => onDelete(watch))
     }
+
+
     return (
         <>
             <div className="animeCard">
                 <h3 className="animeTitle">{anime.title}</h3>
-                <img className="card" src={anime.img} alt={anime.id} onClick={handleClick} />
-                <p>{anime.description}</p>
+                <Link className="5" to={`/:${anime.title}`}>
+                    <img className="" src={anime.img} alt={anime.id} />
+                </Link>
+                {/* <p>{anime.description}</p> */}
                 {
                     user !== null ?
                         <>
 
-                            <button onClick={e => handleFavClick()}>Remove from WatchList</button>
+                            <button onClick={e => handleWatchClick()}>Remove from WatchList</button>
 
                         </>
                         : null

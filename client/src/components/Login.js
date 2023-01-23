@@ -2,23 +2,13 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Login({ user, loginUser }) {
-    // const [userName, setUserName] = useState("")
-    // const [userEmail, setEmail] = useState("")
-    // const [userPassword, setPassword] = useState("")
-    // const [userAvatar, setUserAvatar] = useState("")
+
     const [loginUserName, setLoginUserName] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    // const [loginState, setLoginState] = useState(true)
+
     const [error, setError] = useState('')
 
-    // const userObj = {
-    //     username: userName,
-    //     email: userEmail,
-    //     password: userPassword,
-    //     // password_confirmation: passwordConfirmation,
-    //     isAdmin: false,
 
-    // }
 
     function handleLogin(e) {
         e.preventDefault()

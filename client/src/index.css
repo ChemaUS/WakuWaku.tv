@@ -48,6 +48,7 @@ code {
 .right ul{
 display: flex;
 list-style: none;
+align-items:center
 }
 .right ul li  {
   padding: 10px 20px;
@@ -436,3 +437,25 @@ align-items:center;
 .homepage-bkmarks{
   background-color:red
 }
+.profilePicture {
+  display: inline-block;
+  width: 200px;
+  border-style: solid;
+  border-color: rgb(243, 243, 41);
+  border-radius: 8px;
+  text-align: left;
+  float: left;
+}
+.bookmarkicon {
+  width: 30px;
+}
+.nav-pfp{
+  border-radius:100%;
+    height: 48px;
+    aspect-ratio: auto 48 / 48;
+    width: 48px;
+    
+ 
+ 
+}
+

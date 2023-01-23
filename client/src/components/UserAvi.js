@@ -1,16 +1,19 @@
 import UserPfPCards from "./UserPfPCards"
 
 function UserAvi({ setUserAvatar }) {
-    const deku = "https://i.pinimg.com/736x/1b/ab/c9/1babc93ad8ef07c0d11770dc42e718a2.jpg"
-    const luffy = "https://i.pinimg.com/originals/4c/cf/da/4ccfdaf6092dc341376e6fdb8130d09d.jpg"
-    const mikasa = "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/Mikasa-Ackermann.Attack-on-Titan.webp"
-    const eren = "https://pm1.narvii.com/6717/853fa0542c4a453c28da102ab8bcad61c416de9c_hq.jpg"
-    const allmight = "https://www.looper.com/img/gallery/my-hero-academia-the-reason-all-might-is-the-most-powerful-teacher/intro-1596067346.jpg"
-    const kageyama = "https://www.sosyncd.com/wp-content/uploads/2022/06/160.png"
-    const uraka = "https://i1.sndcdn.com/artworks-000612915041-4oe9at-t500x500.jpg"
-    const ash = "https://www.looper.com/img/gallery/the-rich-history-behind-pokmons-ash-ketchum/l-intro-1667248605.jpg"
-
-    const avatarArray = [deku, luffy, mikasa, eren, allmight, kageyama, uraka, ash]
+    const chopper = "https://i.ytimg.com/vi/djyTG19Achg/maxresdefault.jpg"
+    const luffy = "https://i.pinimg.com/originals/07/50/a6/0750a69ddadcef74e59373f237051f3b.jpg"
+    const mikasa = "https://i.pinimg.com/736x/79/c0/6d/79c06d129131d4f2ee57076e9176d753.jpg"
+    const eren = "https://wallpapers-clan.com/wp-content/uploads/2022/09/attack-on-titan-eren-pfp-4.jpg"
+    const goku = "https://i.kym-cdn.com/entries/icons/facebook/000/024/590/ultra_instinct_goku.jpg"
+    const gojo = "https://avatarfiles.alphacoders.com/322/322448.jpg"
+    const tanjiro = "https://wallpapers-clan.com/wp-content/uploads/2022/02/demon-slayer-tanjiro-pfp-5.jpg"
+    const sakura = "https://starcrossedanime.com/wp-content/uploads/2021/04/Fate-%E2%81%84-stay-night-Heavens-Feel-III-spring-song-3.jpg"
+    const naruto = "https://pfps.gg/assets/pfps/1613-naruto.png"
+    const sasuke = "https://wallpapers-clan.com/wp-content/uploads/2022/06/naruto-sasuke-uchiha-pfp-1.jpg"
+    const kirito = "https://wallpapers.com/images/hd/kirito-in-the-city-l3lfh6ws49rvfqn0.jpg"
+    const yuta = "https://twinfinite.net/wp-content/uploads/2022/09/Jujutsu-Kaisen-0-Yuta-Prepping-Attack-Screenshot.jpg?fit=1200%2C675"
+    const avatarArray = [chopper, luffy, mikasa, eren, goku, gojo, tanjiro, sakura, naruto, sasuke, kirito, yuta]
 
     const avatarPfP = avatarArray.map((avatar) => {
         return (

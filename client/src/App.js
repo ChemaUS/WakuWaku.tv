@@ -11,10 +11,13 @@ import Video from "./HomePage/Video"
 
 
 function App() {
-  const [user, loginUser] = useState(null)
+  const [user, loginUser] = useState("")
   const [anime, setAnime] = useState([]);
   const [search, setSearch] = useState("")
   const [episodes, setEpisodes] = useState([])
+  // const [watchlist, setWatchlist] = useState([])
+
+
 
   useEffect(() => {
     fetch('/me')
@@ -34,8 +37,9 @@ function App() {
       method: 'DELETE',
 
     })
-      .then(r => r.json())
-      .then(loginUser(null))
+      .then(resp => resp.json())
+      .then(console.log(null))
+
   }
 
 
@@ -51,6 +55,17 @@ function App() {
       .then(r => r.json())
       .then(data => setEpisodes(data))
   }, [])
+//   useEffect(() => {
+//     fetch("userwatchlist")
+//         .then(r => r.json())
+//         .then(data => setWatchlist(data))
+// }, [user])
+
+// function updatedArray(deletedWatchListAnime) {
+//   const updatedWatchList = watchlist.filter((watchlist) => {
+//       return watchlist.id !== deletedWatchListAnime.id;
+//   });
+//   setWatchlist(updatedWatchList);
 
   return (
     <>
@@ -74,7 +89,7 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/Home" >
-            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} />
+            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime} />
           </Route>
 
           <Route exact path="/login">
@@ -100,7 +115,11 @@ function App() {
             <Signup loginUser={loginUser} user={user} />
           </Route>
 
-          <Route exact path="/profile"> <ProfilePage user={user} /> </Route>
+          <Route exact path="/profile"> <ProfilePage user={user} anime={anime}
+          // watchlist={watchlist} 
+          />
+          </Route>
+
 
           {anime.map((anime) => {
             return (

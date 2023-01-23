@@ -3,6 +3,7 @@ function UserPfPCards({ avatar, setUserAvatar }) {
     function handleClick(e) {
         setUserAvatar(avatar)
     }
+    console.log(handleClick)
 
     return (
         <>

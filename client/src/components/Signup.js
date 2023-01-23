@@ -11,9 +11,8 @@ function Signup({ user, loginUser }) {
         username: userName,
         email: userEmail,
         password: userPassword,
-        // password_confirmation: passwordConfirmation,
         isAdmin: false,
-
+        avatar: userAvatar
     }
 
     function handleCreateAccount(e) {

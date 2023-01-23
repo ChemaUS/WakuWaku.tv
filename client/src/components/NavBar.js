@@ -1,7 +1,7 @@
 // import images from "../images/Header.jpeg"
 import headerimage from "../images/WakuHeaderimg2.png"
 import { Link } from "react-router-dom";
-function NavBar() {
+function NavBar({ user, handleLogout }) {
 
     return (
         <>
@@ -17,7 +17,10 @@ function NavBar() {
                         {/* <li><Link className="navlink" to="/Popular"> Popular </Link></li> */}
                         <li><Link className="navlink" to="/"> About </Link></li>
                         <li><Link className="navlink" to="/profile"> Profile </Link></li>
+                        <img className="nav-pfp" src={user.avatar} alt='' />
+                        <button onClick={e => handleLogout(e)}> LOGOUT</button>
                     </ul>
+
                 </div>
             </nav>
         </>

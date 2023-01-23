@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :watchlists, only:[:create, :destroy]
+  resources :watchlists, only:[:create, :destroy,:index]
   resources :posts, only:[:create, :destroy]
   resources :episodes, only:[:index, :show]
   resources :users, only: [:index, :create]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get "/me", to: "users#show"
 
-  get "userwatchlist", to: "users#user_watchlists"
+  get "userwatchlist", to: "users#user_watchlist"
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }

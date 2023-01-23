@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_secure_password
     has_many :posts, dependent: :destroy
     has_many :episodes, through: :posts
     has_many :watchlists, dependent: :destroy
