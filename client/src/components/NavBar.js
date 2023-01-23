@@ -18,7 +18,7 @@ function NavBar({ user, handleLogout }) {
                         <li><Link className="navlink" to="/"> About </Link></li>
                         <li><Link className="navlink" to="/profile"> Profile </Link></li>
                         <img className="nav-pfp" src={user.avatar} alt='' />
-                        <button onClick={e => handleLogout(e)}> LOGOUT</button>
+                        <button onClick={e => handleLogout(e)}> LOGOUT not working</button>
                     </ul>
 
                 </div>
