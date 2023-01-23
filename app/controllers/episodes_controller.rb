@@ -1,4 +1,5 @@
 class EpisodesController < ApplicationController
+    skip_before_action :verify_authenticity_token
     def index
         episodes = Episode.all
         render json: episodes, status: :ok 
