@@ -15,7 +15,10 @@ function Login({ user, loginUser }) {
         fetch("/login", {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ loginUserName, loginPassword })
+            body: JSON.stringify({
+                username: loginUserName,
+                password: loginPassword
+            })
         })
             .then(r => r.json())
             .then(data => {

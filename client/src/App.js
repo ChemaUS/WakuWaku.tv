@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Link, useParams, } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Signup from './components/Signup'
@@ -16,7 +16,7 @@ function App() {
   const [anime, setAnime] = useState([]);
   const [search, setSearch] = useState("")
   const [episode, setEpisode] = useState([])
-
+  const history = useHistory()
 
 
 
@@ -32,14 +32,21 @@ function App() {
 
   }, [])
 
-  function handleLogout() {
+  // function handleLogout() {
+  //   fetch('/logout', {
+  //     method: 'DELETE',
+
+  //   })
+  //     .then(resp => resp.json())
+  //     .then(console.log(null))
+
+  // }
+  const handleLogout = () => {
+    // setUser({})
     fetch('/logout', {
-      method: 'DELETE',
-
+      method: 'DELETE'
     })
-      .then(resp => resp.json())
-      .then(console.log(null))
-
+    history.push("/Login")
   }
 
 
@@ -58,21 +65,11 @@ function App() {
       })
   }, [])
 
-  // function handleClick() {
-  //   fetch(`/episodes/${episodes.id++}`)
-  //     .then(r => r.json())
-  //     .then(data => {
-  //       console.log(data)
-  //       // setEpisode(data)
-  //     })
-
-  // }
-
-
 
   return (
     <>
       <NavBar handleLogout={handleLogout} user={user} />
+
       <Route exact path="/">
         <div className='landing-page-bkgrnd'>
         </div>
@@ -89,8 +86,10 @@ function App() {
           </div>
         </div>
       </Route>
+
       <div>
         <Switch>
+
           <Route exact path="/Home" >
             <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime} />
           </Route>
@@ -99,7 +98,6 @@ function App() {
             <div className='landing-page-bkgrnd'>
             </div>
             <div className="top">
-
               <div className="landing-body">
                 <img className="landing-img" src={images} alt="" />
               </div>
@@ -118,9 +116,8 @@ function App() {
             <Signup loginUser={loginUser} user={user} />
           </Route>
 
-          <Route exact path="/profile"> <ProfilePage user={user} anime={anime}
-
-          />
+          <Route exact path="/profile">
+            <ProfilePage user={user} anime={anime} />
           </Route>
 
 
@@ -134,7 +131,7 @@ function App() {
 
           {episode.map((episode) => {
             return (
-              <Route path={`/${episode.title}`} >
+              <Route path={`/watch/${episode.anime.id}`} >
                 <Video episode={episode} key={episode.id} />
               </Route>
             )

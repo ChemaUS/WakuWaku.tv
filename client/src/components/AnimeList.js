@@ -32,7 +32,7 @@ function AnimeList({ anime, user, setAnime }) {
     return (
         <>
         <div className="container">
-                {animeElements}
+                {animeElements.reverse()}
         </div>
         </>
 

@@ -936,7 +936,8 @@ episode16 = Episode.create(episodeNumber:1,title:"Weathering with You", episodeU
 episode17 = Episode.create(episodeNumber:1,title:"Boruto: Naruto the Movie", episodeUrl:"https://drive.google.com/file/d/1AhPs5ubqhPNrVNsBMVuRflf6Y04JhK3X/preview",anime:anime17)
 #Rascal Does not Dream of  a dreaming girl movie
 episode18 = Episode.create(episodeNumber:1,title:"Rascal Does Not Dream of a Dreaming Girl", episodeUrl:"https://drive.google.com/file/d/14b3Cuc2n4M9hO-yTY0t_WArckaZfilfe/preview",anime:anime18)
-#Evangelion 1.0 movie
+#Evangelion 1.0 movie        
+
 episode19 = Episode.create(episodeNumber:1,title:"Evangelion: 1.0 You Are (Not) Alone", episodeUrl:"https://drive.google.com/file/d/1gwTSdPGANWadFJb_PuyTVfXookypFXf4/preview",anime:anime19)
 #Evangelion 2.0 movie
 episode20 = Episode.create(episodeNumber:1,title:"Evangelion: 2.0 You Can (Not) Advance", episodeUrl:"https://drive.google.com/file/d/1O7GJTR1KnM_iHoo3tqOmmpm2XjHVCtu1/preview",anime:anime20)
@@ -1106,7 +1107,7 @@ episode123 = Episode.create(episodeNumber:12,title:"Attack on Titan Season 3", e
 
 
                                 #<<<<<<<<<<<<<<<<<<<<<<<AOT s4>>>>>>>>>>>>>>>>>>>>>
-
+                                                  "Attack on Titan The Final Season"
 episode134 = Episode.create(episodeNumber:1,title:"Attack on Titan The Final Season", episodeUrl:"https://drive.google.com/file/d/1yS3gIvdW-l6DOHTLYU_AvO0W-W_vPQ7w/preview",anime:anime55)
 episode135 = Episode.create(episodeNumber:2,title:"Attack on Titan The Final Season", episodeUrl:"https://drive.google.com/file/d/1OltM9ShcsZRE5D6LPRdIWggKTn75y9CN/preview",anime:anime55)
 episode136 = Episode.create(episodeNumber:3,title:"Attack on Titan The Final Season", episodeUrl:"https://drive.google.com/file/d/15wqq9waCWUkDtaN-Yss7Z9li7nru808C/preview",anime:anime55) #redownload

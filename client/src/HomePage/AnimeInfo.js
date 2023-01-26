@@ -56,7 +56,7 @@ function AnimeInfo({ anime, watchStatus, user, episode }) {
                     {/* <h3 className="anime-info-count">Episodes {anime.episodeCount}</h3> */}
 
                     {/* {video} */}
-                    <Link className="2" to={`/${anime.title}`} >
+                    <Link className="2" to={`/watch/${anime.id}`} >
                         <button className="anime-info-watch-now-btn">Watch Now</button>
 
                     </Link>

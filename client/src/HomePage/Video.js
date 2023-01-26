@@ -18,19 +18,18 @@ function Video({ episode }) {
 
     return (
         <div>
-            <h1>{episodeUrl}</h1>
-            <h1>{episode.title}</h1>
+
+            <h1 className="videotitle">{episode.title}</h1>
+            <hr className="video-hr"></hr>
+            <h1 className="videoep"> Episode {episode.episodeNumber}</h1>
             <div className="video-page-container">
                 <iframe className="video" src={episode.episodeUrl} width="640" height="480" allow="autoplay" allowfullscreen="allowfullScreen" title={episode.anime}></iframe>
                 <div className="next-prev-ep">
                     <Link className="episodelink" to={`/episode/${episode.id - 1}`} ><h1>Previous Episode</h1> </Link>
 
-                    <Link className="episodelink" to={`/episode/${episode.id + 1}`} ><h1 >Next Episode</h1> </Link>
-                    {/* <h1 onClick={handleClick}>Next Episode</h1> */}
+                    <Link className="episodelink" to={`/episode/${episode.id + 1}`} ><h1 >Next Episode</h1> </Link>     
             </div>
-                <div className="video-container">
-                    <h1>Episode {episode.episodeNumber}</h1>
-                </div>
+                <hr className="video-hr2"></hr>
             </div>
 
 
