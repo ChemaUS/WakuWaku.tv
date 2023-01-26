@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 function Login({ user, loginUser }) {
 
     const [loginUserName, setLoginUserName] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-
     const [error, setError] = useState('')
+    let history = useHistory()
 
 
 
@@ -22,7 +22,7 @@ function Login({ user, loginUser }) {
                 if (data.id) {
 
                     loginUser(data);
-                    // history.push("/HomePage")
+                    history.push("/Home")
                 } else if (data.error) {
                     setError(data.error)
                 }
@@ -38,7 +38,7 @@ function Login({ user, loginUser }) {
                         <label>Username:</label>
                     </div>
                     <div className='user-box'>
-                        <input type="text" name="loginPassword" onChange={e => setLoginPassword(e.target.value)}></input>
+                        <input type="password" name="loginPassword" onChange={e => setLoginPassword(e.target.value)}></input>
                         <label>Password:</label>
                     </div>
                     <div className='button-form'>

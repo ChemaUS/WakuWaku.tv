@@ -1,5 +1,5 @@
 import UserAvi from "./UserAvi"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import React, { useState } from "react"
 
 function Signup({ user, loginUser }) {
@@ -7,6 +7,7 @@ function Signup({ user, loginUser }) {
     const [userEmail, setEmail] = useState("")
     const [userPassword, setPassword] = useState("")
     const [userAvatar, setUserAvatar] = useState("")
+    let history = useHistory()
     const userObj = {
         username: userName,
         email: userEmail,
@@ -28,14 +29,14 @@ function Signup({ user, loginUser }) {
         })
             .then(r => r.json())
             .then(data => {
-                setUserAvatar(data)
+                setUserAvatar(data); history.push("/Home")
             })
 
         // history("/")
     }
     return (
         <>
-            <div className="login-box">
+            <div className="signup-box">
                 <form onSubmit={handleCreateAccount}>
                     <div className='user-box'>
                         <input type="text" name="username" onChange={e => setUserName(e.target.value)} />
@@ -46,19 +47,20 @@ function Signup({ user, loginUser }) {
                         <label>Email:</label>
                     </div>
                     <div className='user-box'>
-                        <input type="text" name="password" onChange={e => setPassword(e.target.value)}></input>
+                        <input type="password" name="password" onChange={e => setPassword(e.target.value)}></input>
                         <label>Password:</label>
                     </div>
                     <UserAvi setUserAvatar={setUserAvatar} />
                     <br />
                     <br />
-                    <button>Create Account!</button>
+
                     <div className='button-form'>
-                        <p>
+                        <button className="create-btn">Create Account</button>
+                        <h1>
                             <Link className="signup" to="/Login">
                                 Already have an account?
                             </Link>
-                        </p>
+                        </h1>
                     </div>
 
                 </form>

@@ -32,7 +32,7 @@ function WatchListCard({ anime, user, watchStatus, onDelete, watch }) {
                     <img className="card-img" src={anime.img} alt={anime.id} />
                 </Link>
                 <h1 className=" card-title">{anime.title}</h1>
-                <h2 className="card_genre">{anime.genre}</h2>
+                <h2 className="card_genre">{`${anime.genre},`}</h2>
                 {/* <h2 className="card_ep_count">Episode count: {anime.episodeCount}</h2>
                 <h2 className="type_of_media">{anime.format}</h2> */}
                 {/* <p>{anime.description}</p> */}

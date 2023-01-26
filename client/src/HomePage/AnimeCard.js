@@ -41,7 +41,7 @@ function AnimeCard({ anime, watchStatus, user }) {
                         : null
                 }
                 <h1 className="card-title">{anime.title}</h1>
-                <h2 className="card_genre">{anime.genre}</h2>
+                <h2 className="card_genre">{`${anime.genre}`}</h2>
                 <h2 className="card_ep_count">Episode count: {anime.episodeCount}</h2>
                 <h2 className="type_of_media">{anime.format}</h2>
 
