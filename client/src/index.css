@@ -178,7 +178,20 @@ right:10%
 }
 .login-box{
   position: absolute;
-  top: 57%;
+  top: 54%;
+  left: 50%;
+  width: 400px;
+  padding:30px;
+  transform: translate(-50%,-50%);
+  background: #242026;
+  box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+  border-radius:10px;
+  z-index:9
+}
+
+.signup-box{
+  position: absolute;
+  top: 62%;
   left: 50%;
   width: 400px;
   padding:30px;
@@ -194,6 +207,27 @@ right:10%
   color: #fff;
   text-align:center
 }
+
+.signup-box h2{
+  margin:0 0 30px;
+  padding:0;
+  color: #fff;
+  text-align:center
+}
+
+.signup-box .user-box input{
+  position:relative;
+  width:100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
 .login-box .user-box input{
   position:relative;
   width:100%;
@@ -206,6 +240,18 @@ right:10%
   outline: none;
   background: transparent;
 }
+
+.signup-box .user-box label{
+  position: relative;
+  left:0;
+  top: -60px;
+  padding: 10px 0;
+  font-size:16px;
+  color: #fff;
+  pointer-events:none;
+  transition: .5s;
+}
+
 .login-box .user-box label{
   position: relative;
   left:0;
@@ -216,6 +262,16 @@ right:10%
   pointer-events:none;
   transition: .5s;
 }
+
+.signup-box .user-box input:focus~label,
+.signup-box .user-box input:valid~label{
+  top: -85px;
+  left:0;
+  color: #8F7CEC;
+  font-size: 12px
+}
+
+
 .login-box .user-box input:focus~label,
 .login-box .user-box input:valid~label{
   top: -85px;
@@ -225,7 +281,7 @@ right:10%
 }
 .button-form{
   display:flex;
-  justify-content:space-around
+  justify-content:space-around;
 }
 .submit{
   padding:10px 20px;
@@ -241,14 +297,14 @@ right:10%
   
 }
 .submit:hover{
-  background: #8F7CEC;
+  background: pink;
   color:#fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
 }
 .signup , .login{
   text-decoration:none;
-  padding:10px 20px;
+  paddig:10px ;
   color: #CBBDDB;
   font-size: 16px;
   text-decoration: none;
@@ -259,20 +315,24 @@ right:10%
   border: 1px solid, #8F7CEC;
   margin:auto;
 }
+.signup:hover{
+   color: pink;
+}
 .pfp_selection{
   height: 70px;
   width: 70px;
   object-fit: cover;
   margin: 10px;
   border-style: solid;
-  border-color: rgb(243, 243, 41);
+  border-color: pink;
   border-radius: 8px;
+  cursor:pointer
 }
 .card-list{
 background: #2a2c31;
 margin-left:40px;
-height:450px;
-width:280px
+height:470px;
+width:280px;
 }
 .card-img{
   height:280px;
@@ -281,13 +341,14 @@ width:280px
 .type_of_media{
   font-size: 14px;
   margin-left:10px;
-  color:#aaa
+  color:#aaa;
+
 }
 .card_genre{
   font-size: 13px;
   margin-left:10px;
-  color:#aaa
- 
+  color:#aaa;
+
 }
 .card-title{
   font-size: 14px;
@@ -357,7 +418,7 @@ align-items:center;
    
     font-size:15px;
     line-height:30px;
-    margin-top:40px;
+    margin-top:20px;
     margin-left:40px
   }
   .anime-info-watch-now-btn{
@@ -370,8 +431,14 @@ align-items:center;
     line-height:1.5rem;
     text-align:center;
     color: rgb(17,17,17);
-    margin-top:40px;
+    margin-top:20px;
     margin-left:40px
+  }
+  .anime-info-watch-now-btn:hover{
+    background: pink;
+    color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
   }
   .anime-info-title{
     margin-left:40px;
@@ -387,6 +454,14 @@ align-items:center;
     line-height:1.5rem;
     text-align:center;
     color: rgb(17,17,17);
+    margin-left:20px
+  }
+
+  .anime-info-add-to-watchlist-btn:hover{
+    background: pink;
+    color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
   }
   .video{
    margin: 0;
@@ -439,23 +514,152 @@ align-items:center;
 }
 .profilePicture {
   display: inline-block;
-  width: 200px;
+  width: 100px;
   border-style: solid;
-  border-color: rgb(243, 243, 41);
-  border-radius: 8px;
+  border-color: rgb(216, 16, 216);
+  border-radius: 100%;
   text-align: left;
   float: left;
+  margin-right:25px
+  
 }
 .bookmarkicon {
   width: 30px;
 }
 .nav-pfp{
   border-radius:100%;
+  border-style: solid;
     height: 48px;
     aspect-ratio: auto 48 / 48;
     width: 48px;
-    
- 
- 
+    border-color: rgb(216, 16, 216)
 }
+.pfp-bookmark{
+  height: 8rem;
+    width: 8rem;
+}
+.pfp-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0px;
+  row-gap: 20px;
+ text-align: left;
+align-items:center;
+margin-left:40px;
+}
+.pfp-header{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+.my-watchlist{
+font-size:35px
+}
+.hr{
+  width:50%
+}
+.remove-from-wtchlist{
 
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height:1.5rem;
+  text-align:center;
+  color: rgb(17,17,17);
+  margin-top:40px;
+  margin-left:40px
+}
+.remove-from-wtchlist:hover{
+  background: pink;
+  color:#fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
+}
+.next-prev-ep{
+  text-align:center;
+  top:80%;
+  left: 37%;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+}
+.episodelink{
+   text-decoration:none;
+  color:#fff;
+  margin-right:70px;
+  font-size:10px
+}
+.Nextepisodelink{
+   text-decoration:none;
+  color:#fff;
+  margin-right:70px;
+  font-size:10px
+}
+.Prevepisodelink{
+   text-decoration:none;
+  color:#fff;
+  margin-right:70px;
+  font-size:10px
+}
+.Nextepisodelink:hover{
+  color:pink
+}
+.Prevepisodelink:hover{
+  color:pink
+}
+.episodelink:hover{
+  color:pink
+}
+.create-btn{
+  cursor:pointer;
+  padding:5px 15px;
+  color: #CBBDDB;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform:uppercase;
+  overflow:hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  border: 1px solid, #8F7CEC;
+  margin:auto; 
+   margin-right:35px
+}
+.create-btn:hover{
+  background: pink;
+  color:#fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
+}
+.videotitle{
+  position:absolute;
+  left:50%;
+  bottom:75%;
+  z-index:4;
+  margin: 0;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  line-height:2rem
+}
+.videoep{
+   position:absolute;
+  left:45%;
+  bottom:67%;
+  z-index:4
+}
+.video-hr{
+  position:absolute;
+  width:100%;
+   bottom:73%;
+   
+   z-index:4;
+  
+}
+.video-hr2{
+  position:absolute;
+  width:100%;
+   bottom:10%;
+   z-index:4;
+  
+}

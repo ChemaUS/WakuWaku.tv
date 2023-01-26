@@ -16,9 +16,13 @@ function NavBar({ user, handleLogout }) {
                         <li><Link className="navlink" to="/home"> Home </Link></li>
                         {/* <li><Link className="navlink" to="/Popular"> Popular </Link></li> */}
                         <li><Link className="navlink" to="/"> About </Link></li>
-                        <li><Link className="navlink" to="/profile"> Profile </Link></li>
-                        <img className="nav-pfp" src={user.avatar} alt='' />
-                        <button onClick={e => handleLogout(e)}> LOGOUT not working</button>
+                        {
+                            user !== null ?
+                                <Link className="navlink" to="/profile"> <img className="nav-pfp" src={user.avatar} alt='' /></Link>
+                                : null
+                        }
+
+                        <button className="anime-info-add-to-watchlist-btn" onClick={e => handleLogout(e)}> LOGOUT </button>
                     </ul>
 
                 </div>

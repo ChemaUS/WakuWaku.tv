@@ -23,7 +23,7 @@ function UserAvi({ setUserAvatar }) {
 
     return (
         <div>
-            <h4>Select an Avatar!</h4>
+            <h4 style={{ color: '#CBBDDB' }}>Select Custom Profile Image</h4>
             {avatarPfP}
         </div>
     )

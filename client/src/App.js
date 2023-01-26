@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Signup from './components/Signup'
@@ -8,14 +8,15 @@ import ProfilePage from "./components/ProfilePage";
 import images from "./images/Header.jpeg"
 import AnimeInfo from "./HomePage/AnimeInfo";
 import Video from "./HomePage/Video"
+import VideoPlayer from "./HomePage/VideoPlayer"
 
 
 function App() {
   const [user, loginUser] = useState("")
   const [anime, setAnime] = useState([]);
   const [search, setSearch] = useState("")
-  const [episodes, setEpisodes] = useState([])
-  // const [watchlist, setWatchlist] = useState([])
+  const [episode, setEpisode] = useState([])
+  const history = useHistory()
 
 
 
@@ -24,7 +25,6 @@ function App() {
       .then(r => {
         if (r.ok) {
           r.json().then(data => {
-            console.log(data)
             loginUser(data)
           })
         }
@@ -32,14 +32,21 @@ function App() {
 
   }, [])
 
-  function handleLogout() {
+  // function handleLogout() {
+  //   fetch('/logout', {
+  //     method: 'DELETE',
+
+  //   })
+  //     .then(resp => resp.json())
+  //     .then(console.log(null))
+
+  // }
+  const handleLogout = () => {
+    // setUser({})
     fetch('/logout', {
-      method: 'DELETE',
-
+      method: 'DELETE'
     })
-      .then(resp => resp.json())
-      .then(console.log(null))
-
+    history.push("/Login")
   }
 
 
@@ -51,25 +58,18 @@ function App() {
   const searchName = anime.filter((animeName) => animeName.title.toLowerCase().includes(search.toLowerCase()))
 
   useEffect(() => {
-    fetch('/episodes')
+    fetch(`/episodes`)
       .then(r => r.json())
-      .then(data => setEpisodes(data))
+      .then(data => {
+        setEpisode(data)
+      })
   }, [])
-//   useEffect(() => {
-//     fetch("userwatchlist")
-//         .then(r => r.json())
-//         .then(data => setWatchlist(data))
-// }, [user])
 
-// function updatedArray(deletedWatchListAnime) {
-//   const updatedWatchList = watchlist.filter((watchlist) => {
-//       return watchlist.id !== deletedWatchListAnime.id;
-//   });
-//   setWatchlist(updatedWatchList);
 
   return (
     <>
       <NavBar handleLogout={handleLogout} user={user} />
+
       <Route exact path="/">
         <div className='landing-page-bkgrnd'>
         </div>
@@ -86,8 +86,10 @@ function App() {
           </div>
         </div>
       </Route>
+
       <div>
         <Switch>
+
           <Route exact path="/Home" >
             <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime} />
           </Route>
@@ -96,7 +98,6 @@ function App() {
             <div className='landing-page-bkgrnd'>
             </div>
             <div className="top">
-
               <div className="landing-body">
                 <img className="landing-img" src={images} alt="" />
               </div>
@@ -115,24 +116,31 @@ function App() {
             <Signup loginUser={loginUser} user={user} />
           </Route>
 
-          <Route exact path="/profile"> <ProfilePage user={user} anime={anime}
-          // watchlist={watchlist} 
-          />
+          <Route exact path="/profile">
+            <ProfilePage user={user} anime={anime} />
           </Route>
 
 
           {anime.map((anime) => {
             return (
-              <Route path={`/:${anime.title}`}>
-                <AnimeInfo anime={anime} key={anime.id} />
+              <Route name="route name" path={`/${anime.id}/anime`}>
+                <AnimeInfo anime={anime} key={anime.id} user={user} episode={episode} />
               </Route>
             )
           })};
 
-          {episodes.map((episodes) => {
+          {episode.map((episode) => {
             return (
-              <Route path={`/${episodes.id}/video`}>
-                <Video episodes={episodes} key={episodes.id} anime={anime} />
+              <Route path={`/watch/${episode.anime.id}`} >
+                <Video episode={episode} key={episode.id} />
+              </Route>
+            )
+          })}
+
+          {episode.map((episode) => {
+            return (
+              <Route path={`/episode/${episode.id}`} >
+                <VideoPlayer episodes={episode} key={episode.id} />
               </Route>
             )
           })}

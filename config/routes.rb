@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :watchlists, only:[:create, :destroy,:index]
   resources :posts, only:[:create, :destroy]
   resources :episodes, only:[:index, :show]
-  resources :users, only: [:index, :create]
+  resources :users, only: [:index, :create,:show]
   resources :animes, only:[:index, :show]
 
 
