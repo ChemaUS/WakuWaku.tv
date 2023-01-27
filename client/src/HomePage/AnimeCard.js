@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import bookmark from "../images/bookmark.png"
 import unbookmark from "../images/unbookmark.png"
+
 function AnimeCard({ anime, watchStatus, user }) {
     const [watchlstFavStatus, setWatchlstFavStatus] = useState(watchStatus)
 
@@ -23,6 +24,8 @@ function AnimeCard({ anime, watchStatus, user }) {
 
     return (
         <div>
+
+            {/* {console.log(anime.popular === true ? <img className="card-img" src={anime.img} alt={anime.id} /> : null)} */}
 
             <div className="card-list">
                 <Link className="5" to={`/${anime.id}/anime`}>

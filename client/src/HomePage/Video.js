@@ -1,6 +1,6 @@
 // import images from "../images/WakuWaku.png"
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { generatePath, Link, useParams } from "react-router-dom";
 function Video({ episode }) {
     // const [episode, setEpisode] = useState(episode)
     // function handleClick() {
@@ -12,8 +12,8 @@ function Video({ episode }) {
     //         })
 
     // }
-    const { episodeUrl } = useParams()
-    console.log(episodeUrl)
+
+
 
 
     return (
@@ -25,9 +25,14 @@ function Video({ episode }) {
             <div className="video-page-container">
                 <iframe className="video" src={episode.episodeUrl} width="640" height="480" allow="autoplay" allowfullscreen="allowfullScreen" title={episode.anime}></iframe>
                 <div className="next-prev-ep">
-                    <Link className="episodelink" to={`/episode/${episode.id - 1}`} ><h1>Previous Episode</h1> </Link>
+                    {
+                        episode.episodeNumber === 1 ? null : <Link className="episodelink" to={`/episode/${episode.id - 1}`} ><h1>Previous Episode</h1> </Link>
+                    }
 
-                    <Link className="episodelink" to={`/episode/${episode.id + 1}`} ><h1 >Next Episode</h1> </Link>     
+                    {
+                        episode.anime.id <= 48 ? null : <Link className="episodelink" to={`/episode/${episode.id + 1}`} ><h1 >Next Episode</h1> </Link>
+                    }
+
             </div>
                 <hr className="video-hr2"></hr>
             </div>

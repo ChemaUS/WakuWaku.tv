@@ -1,7 +1,19 @@
 import { useState, useEffect } from "react"
 import AnimeCard from "../HomePage/AnimeCard"
-function AnimeList({ anime, user, setAnime }) {
+// import Popular from "../HomePage/Popular"
+
+function AnimeList({ anime, user }) {
     const [animeWtchLst, setAnimeWtchLst] = useState([])
+    // const [animes, setAnimes] = useState([])
+
+    // useEffect(() => {
+    //     fetch('/animes')
+    //         .then((r) => r.json())
+    //         .then((data) => setAnimes(data));
+    // }, []);
+    // const popularAnime = animes.map(animes => {
+    //     return <Popular animes={animes} key={animes.id} />
+    // })
 
     useEffect(() => {
         if (user !== null) {
@@ -31,6 +43,7 @@ function AnimeList({ anime, user, setAnime }) {
     })
     return (
         <>
+            {/* {popularAnime} */}
         <div className="container">
                 {animeElements.reverse()}
         </div>

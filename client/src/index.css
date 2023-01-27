@@ -58,9 +58,9 @@ align-items:center
   transition: all 1s
 }
 .right ul li :hover{
-  background-color: pink;
+   color: pink;
   border-radius: 7px;
-  color: rgb(22,7,36)
+  
 }
 
 .navlink{
@@ -525,6 +525,7 @@ align-items:center;
 }
 .bookmarkicon {
   width: 30px;
+  cursor:pointer
 }
 .nav-pfp{
   border-radius:100%;
