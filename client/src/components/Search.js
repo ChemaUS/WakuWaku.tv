@@ -2,7 +2,7 @@ function Search({ anime, search, setSearch }) {
 
     return (
         <>
-            <br></br>
+
             <div id="anime-search-bar-container">
                 <input
                     className="search-bar"

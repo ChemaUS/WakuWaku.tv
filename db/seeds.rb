@@ -1477,6 +1477,3 @@ episode374 = Episode.create(episodeNumber:22,title:"Haikyuu!!", episodeUrl:"http
 episode375 = Episode.create(episodeNumber:23,title:"Haikyuu!!", episodeUrl:"https://drive.google.com/file/d/1yB11fNd0Vhgv30WeC0UqcCpcVcLb-zk3/preview",anime:anime73)
 episode376 = Episode.create(episodeNumber:24,title:"Haikyuu!!", episodeUrl:"https://drive.google.com/file/d/1ZcC7i0Efi6T4iEkTZtAXIK9ejvNV5qwt/preview",anime:anime73)
 episode377 = Episode.create(episodeNumber:25,title:"Haikyuu!!", episodeUrl:"https://drive.google.com/file/d/1zGR8gtRsBRdi64asT_hojYoPfOI2Kce6/preview",anime:anime73)
-
-
-    

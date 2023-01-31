@@ -18,10 +18,12 @@ function Video({ episode }) {
 
     return (
         <div>
-
+            <div classname="videoheader">
             <h1 className="videotitle">{episode.title}</h1>
             <hr className="video-hr"></hr>
             <h1 className="videoep"> Episode {episode.episodeNumber}</h1>
+            </div>
+
             <div className="video-page-container">
                 <iframe className="video" src={episode.episodeUrl} width="640" height="480" allow="autoplay" allowfullscreen="allowfullScreen" title={episode.anime}></iframe>
                 <div className="next-prev-ep">

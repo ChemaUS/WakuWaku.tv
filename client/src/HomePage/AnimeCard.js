@@ -1,10 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import bookmark from "../images/bookmark.png"
 import unbookmark from "../images/unbookmark.png"
 
 function AnimeCard({ anime, watchStatus, user }) {
     const [watchlstFavStatus, setWatchlstFavStatus] = useState(watchStatus)
+    const [index, setIndex] = useState(0);
+
+
 
     function handleFavClick() {
         setWatchlstFavStatus(watchlstFavStatus => !watchlstFavStatus)
@@ -22,10 +25,16 @@ function AnimeCard({ anime, watchStatus, user }) {
     }
 
 
+
+
+
+
+
+
+
+
     return (
         <div>
-
-            {/* {console.log(anime.popular === true ? <img className="card-img" src={anime.img} alt={anime.id} /> : null)} */}
 
             <div className="card-list">
                 <Link className="5" to={`/${anime.id}/anime`}>
@@ -47,6 +56,7 @@ function AnimeCard({ anime, watchStatus, user }) {
                 <h2 className="card_genre">{`${anime.genre}`}</h2>
                 <h2 className="card_ep_count">Episode count: {anime.episodeCount}</h2>
                 <h2 className="type_of_media">{anime.format}</h2>
+
 
             </div>
 

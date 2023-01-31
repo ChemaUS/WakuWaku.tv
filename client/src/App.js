@@ -32,17 +32,8 @@ function App() {
 
   }, [])
 
-  // function handleLogout() {
-  //   fetch('/logout', {
-  //     method: 'DELETE',
 
-  //   })
-  //     .then(resp => resp.json())
-  //     .then(console.log(null))
-
-  // }
-  const handleLogout = () => {
-    // setUser({})
+  const handleLogout = () => { 
     fetch('/logout', {
       method: 'DELETE'
     })
@@ -55,6 +46,7 @@ function App() {
       .then((r) => r.json())
       .then((data) => setAnime(data));
   }, []);
+
   const searchName = anime.filter((animeName) => animeName.title.toLowerCase().includes(search.toLowerCase()))
 
   useEffect(() => {
@@ -66,8 +58,24 @@ function App() {
   }, [])
 
 
+
+  function filterGenre(genres) {
+    let filteredAnime = []; // initialize filteredAnime as an empty array
+    setAnime(anime); // reset the filteredAnime to the original list of anime
+    filteredAnime = [...anime];
+    if (genres !== "all") {
+      filteredAnime = anime.filter(category =>
+        category.genre.some(genre => genre.toLowerCase() === genres.toLowerCase())
+      );
+    }
+    setAnime(filteredAnime);
+  }
+
+
   return (
     <>
+
+
       <NavBar handleLogout={handleLogout} user={user} />
 
       <Route exact path="/">
@@ -90,8 +98,10 @@ function App() {
       <div>
         <Switch>
 
-          <Route exact path="/Home" >
-            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime} />
+          <Route path="/Home" >
+            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime}
+              filterGenre={filterGenre}
+            />
           </Route>
 
           <Route exact path="/login">

@@ -1,7 +1,11 @@
-// import images from "../images/Header.jpeg"
+import { useState } from "react";
 import headerimage from "../images/WakuHeaderimg2.png"
 import { Link } from "react-router-dom";
 function NavBar({ user, handleLogout }) {
+    const [onClick, setOnclick] = useState(false)
+    function handleClick() {
+        setOnclick(!onClick)
+    }
 
     return (
         <>
@@ -21,8 +25,11 @@ function NavBar({ user, handleLogout }) {
                                 <Link className="navlink" to="/profile"> <img className="nav-pfp" src={user.avatar} alt='' /></Link>
                                 : null
                         }
+                        {user !== null ?
+                            <button className="anime-info-add-to-watchlist-btn" onClick={e => handleLogout(e)} > LOGOUT </button>
+                            : null
+                        }
 
-                        <button className="anime-info-add-to-watchlist-btn" onClick={e => handleLogout(e)}> LOGOUT </button>
                     </ul>
 
                 </div>
