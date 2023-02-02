@@ -5,9 +5,9 @@ class AnimesController < ApplicationController
         render json: animes, status: :ok
     end
     def show
-        anime = Anime.find_by(id: params[:id])
-        if anime
-            render json: anime
+        @anime = Anime.find_by(id: params[:id])
+        if @anime
+            render json: @anime.episodes
         else
             render json:{message: "Anime not found"}, status: 404
     end

@@ -12,4 +12,9 @@ class EpisodesController < ApplicationController
                 render json: {message: "Episode not found"}, status: 404
         end
     end
+    def all_episodes
+        @episodes = Episode.all
+        render json: @episodes
+      
+    end
 end

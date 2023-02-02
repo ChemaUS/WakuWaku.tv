@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete "/watchlists/:anime_id", to: "watchlists#destroy"
 
   get "/me", to: "users#show"
+  
+  get "/all_episodes", to: "episodes#index"
 
   get "userwatchlist", to: "users#user_watchlist"
   # Routing logic: fallback requests for React Router.

@@ -5,6 +5,7 @@ function Search({ anime, search, setSearch }) {
 
             <div id="anime-search-bar-container">
                 <input
+                    type="search"
                     className="search-bar"
                     placeholder="Search anime..."
                     value={search}

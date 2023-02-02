@@ -1,3 +1,4 @@
+
 body {
   background: #202125;
     font-family: "Montserrat", Arial;
@@ -14,6 +15,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 .navbar{
  
@@ -378,8 +380,8 @@ position:relative;
   justify-content:center;
   }
   .search-bar{
-  width:275px; 
-  height:22px;
+  width:282px; 
+  height:28px;
   position:relative;
   top:12px;
  
@@ -472,41 +474,23 @@ position:relative;
   .video{
    margin: 0;
   position: relative;
-  top: 50%;
+  top: 450px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  border-color:#101010
   }
 
-  .video-page-container {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    box-sizing: border-box;
-    color: rgb(204,204,204);
-    background-position: 50% 25%;
-    line-height:19.6px;
-    height:100vh;
-    width:100%;
-    z-index:3;
+  .video-container {
+    width: 100%;
+    height: 100%;
+   z-index:-2;
    background-image: url("./images/WakuWaku.png");
   background-size: cover;
-  display:inline-block
+  box-sizing: border-box;
+  display:inline-block;
   }
-  .video-page-container::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgb(32,33,37);
-    background: -moz-linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
-    background: -webkit-linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
-    background: linear-gradient(180deg, rgba(32,33,37,1) 0%, rgba(32,33,37,0) 64%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202125",endColorstr="#202125",GradientType=1);
-    }
-
+ 
 .homepage-bkmarks{
   background-color:red
 }
@@ -558,7 +542,6 @@ font-size:35px
   width:50%
 }
 .remove-from-wtchlist{
-
   border-radius: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -578,9 +561,9 @@ font-size:35px
 }
 .next-prev-ep{
   text-align:center;
-  top:80%;
-  left: 37%;
-  position:absolute;
+  top:-250px;
+  left: 10px;
+  position:relative;
   display:flex;
   justify-content:center;
 }
@@ -664,9 +647,21 @@ font-size:35px
 .video-hr2{
   position:absolute;
   width:100%;
-   bottom:10%;
+   bottom:-170px;
    z-index:4;
   
+}
+.episode-list-hr{
+  position:relative;
+   top:-336.5px;
+   background-color:black;
+   color:black
+}
+.hr2{
+ position:relative;
+ top:214.5px;
+ background-color:#202120;
+ color:black
 }
 
 .popular-container::before{
@@ -785,7 +780,6 @@ position:relative;
   margin-left:10px
 }
  .trending-watch-now-btn{
-   
     border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
@@ -803,3 +797,64 @@ position:relative;
     border-radius: 5px;
     box-shadow: 0 0 5px #8F7CEC, 0 0 25px #8F7CEC, 0 0 50px #8F7CEC, 0 0 100px #8F7CEC
   }
+  .episode-list{
+   height:100%;
+   flex:1;
+   float:left;
+   margin-bottom:2px;
+   padding:0;
+   display:block;
+   box-sizing: border-box;
+   width:1px
+  }
+
+  .episode-list-number{
+    list-style-type: none; 
+    flex:1;
+    margin: 0;
+    padding: 0;
+    background-color:#2a2c31;;
+    width:80px;
+    align-text:center;
+    text-align:center;
+    box-sizing: border-box;
+    border:solid;
+    border-color:grey;
+    border-radius:3px;
+    padding:1px;
+    display:block;
+    float:left;
+    margin-left:8px
+  }
+  .episode-list-number:hover{
+    border:solid;
+    border-color:#fff;
+    background:pink
+  }
+  .episode-number-link{
+    text-decoration:none;
+    color:#fff;
+    width:20px;
+    align-text:center;
+    text-align:center;
+    box-sizing: border-box;
+    float:left;
+  
+  }
+
+  
+.episode-list-container{
+  width:415px;
+  height:484px;
+  top:-281px;
+  flex-direction:column;
+  flex-wrap:wrap;
+  position:relative;
+  display:flex;
+  margin:0;
+  padding: 0;
+  align-items:left;
+  background-color:#101010;;
+ overflow-y: scroll;
+ border-color:#101010;
+}

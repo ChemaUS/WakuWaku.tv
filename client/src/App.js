@@ -16,6 +16,7 @@ function App() {
   const [anime, setAnime] = useState([]);
   const [search, setSearch] = useState("")
   const [episode, setEpisode] = useState([])
+  const [allEpisodes, setAllEpisodes] = useState([])
   const history = useHistory()
 
 
@@ -59,6 +60,13 @@ function App() {
 
 
 
+  useEffect(() => {
+    fetch('/all_episodes')
+      .then(response => response.json())
+      .then(episodes => setAllEpisodes(episodes.map(ep => { return ep })))
+      .catch(error => console.error(error));
+  }, []);
+
   function filterGenre(genres) {
     let filteredAnime = []; // initialize filteredAnime as an empty array
     setAnime(anime); // reset the filteredAnime to the original list of anime
@@ -71,11 +79,8 @@ function App() {
     setAnime(filteredAnime);
   }
 
-
   return (
     <>
-
-
       <NavBar handleLogout={handleLogout} user={user} />
 
       <Route exact path="/">
@@ -88,9 +93,8 @@ function App() {
           <div className="text-landing">
             <h1 className="landing-pg-title">Welcome to WakuWaku.tv!</h1>
             <p className="landing-pg-desc">WakuWaku.tv is a web app where you can watch you're favorite anime movie and shows subbed for FREE! Watch in ultra HD quality ad free without any registration or payment needed. </p>
-            <Link className="navlink" to="/Login"> <button className="landing-pg-btn">Get Started!</button>
-            </Link>
 
+            <Link className="navlink" to="/Login"> <button className="landing-pg-btn">Get Started!</button> </Link>
           </div>
         </div>
       </Route>
@@ -99,9 +103,7 @@ function App() {
         <Switch>
 
           <Route path="/Home" >
-            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime}
-              filterGenre={filterGenre}
-            />
+            <HomePage user={user} loginUser={loginUser} anime={searchName} search={search} setSearch={setSearch} setAnime={setAnime} filterGenre={filterGenre} />
           </Route>
 
           <Route exact path="/login">
@@ -134,7 +136,7 @@ function App() {
           {anime.map((anime) => {
             return (
               <Route name="route name" path={`/${anime.id}/anime`}>
-                <AnimeInfo anime={anime} key={anime.id} user={user} episode={episode} />
+                <AnimeInfo anime={anime} key={anime.id} user={user} />
               </Route>
             )
           })};
@@ -142,7 +144,9 @@ function App() {
           {episode.map((episode) => {
             return (
               <Route path={`/watch/${episode.anime.id}`} >
-                <Video episode={episode} key={episode.id} />
+                <Video episode={episode} key={episode.id}
+                  allEpisodes={allEpisodes} anime={anime}
+                />
               </Route>
             )
           })}
@@ -150,7 +154,9 @@ function App() {
           {episode.map((episode) => {
             return (
               <Route path={`/episode/${episode.id}`} >
-                <VideoPlayer episodes={episode} key={episode.id} />
+                <VideoPlayer episodes={episode} key={episode.id}
+                  allEpisodes={allEpisodes}
+                />
               </Route>
             )
           })}
